@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="btn_bind_service" type="id"/>
+    <item name="widget_operation" type="id"/>
+
+</resources>

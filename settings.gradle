@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+enableFeaturePreview("VERSION_CATALOGS")
+rootProject.name = "ServiceDemo"
+include ':app'
+include ':lib_messenger'
+include ':lib_binder'
+include ':lib_aidl'
+include ':lib_foreground'
+include ':lib_background'
+include ':lib_intent'
+include ':lib_core'

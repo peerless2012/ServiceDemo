@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="bind_service">Bind</string>
+    <string name="unbind_service">Unbind</string>
+
+</resources>

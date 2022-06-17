@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk libs.versions.compileSdk.get().toInteger()
+    buildToolsVersion libs.versions.buildTools.get()
+    defaultConfig {
+        applicationId "com.peerless2012.service"
+        minSdk libs.versions.minSdk.get().toInteger()
+        targetSdk libs.versions.targetSdk.get().toInteger()
+        versionCode libs.versions.versionCode.get().toInteger()
+        versionName libs.versions.versionName.get()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    buildToolsVersion '32.0.0'
+}
+
+dependencies {
+    implementation project(":lib_intent")
+    implementation project(":lib_background")
+    implementation project(":lib_foreground")
+    implementation project(":lib_messenger")
+    implementation project(":lib_binder")
+    implementation project(":lib_aidl")
+    implementation libs.androidx.annotation
+    implementation libs.androidx.appcompat
+    implementation libs.bundles.androidx.core
+    implementation libs.google.material
+    implementation libs.androidx.constraintlayout
+    implementation libs.bundles.androidx.lifecycle
+    implementation libs.bundles.androidx.navigation
+    testImplementation libs.test.junit
+    androidTestImplementation libs.androidx.test.junit
+    androidTestImplementation libs.androidx.test.espresso
+}
