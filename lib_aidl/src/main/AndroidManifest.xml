@@ -4,7 +4,9 @@
 
     <application>
 
-        <service android:name=".service.AIDLService">
+        <service
+            android:name=".service.AIDLService"
+            android:process=":AIDL">
 
         </service>
 

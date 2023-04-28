@@ -31,7 +31,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures.aidl = true
 }
+
 
 dependencies {
     implementation libs.bundles.androidx.core
